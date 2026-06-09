@@ -1,0 +1,42 @@
+[2026-06-09T08:43:29.398+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:43:29.400+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_ingestion_meteo.py for tasks to queue
+[2026-06-09T08:43:29.404+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:43:29.404+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:43:29.466+0000] {processor.py:840} INFO - DAG(s) 'dag_ingestion_meteo' retrieved from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:43:29.934+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:43:29.934+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-06-09T08:43:29.951+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:43:29.951+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingestion_meteo to None, run_after=None
+[2026-06-09T08:43:34.872+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_ingestion_meteo.py took 5.488 seconds
+[2026-06-09T08:44:05.031+0000] {processor.py:161} INFO - Started process (PID=178) to work on /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:44:05.033+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_ingestion_meteo.py for tasks to queue
+[2026-06-09T08:44:05.037+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:44:05.037+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:44:05.173+0000] {processor.py:840} INFO - DAG(s) 'dag_ingestion_meteo' retrieved from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:44:05.221+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:44:05.220+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-06-09T08:44:05.239+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:44:05.239+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingestion_meteo to None, run_after=None
+[2026-06-09T08:44:05.456+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_ingestion_meteo.py took 0.438 seconds
+[2026-06-09T08:44:35.729+0000] {processor.py:161} INFO - Started process (PID=202) to work on /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:44:35.731+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_ingestion_meteo.py for tasks to queue
+[2026-06-09T08:44:35.734+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:44:35.733+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:44:35.759+0000] {processor.py:840} INFO - DAG(s) 'dag_ingestion_meteo' retrieved from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:44:35.797+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:44:35.797+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-06-09T08:44:35.817+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:44:35.816+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingestion_meteo to None, run_after=None
+[2026-06-09T08:44:35.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_ingestion_meteo.py took 0.157 seconds
+[2026-06-09T08:45:05.984+0000] {processor.py:161} INFO - Started process (PID=212) to work on /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:45:05.985+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_ingestion_meteo.py for tasks to queue
+[2026-06-09T08:45:05.988+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:45:05.987+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:45:06.028+0000] {processor.py:840} INFO - DAG(s) 'dag_ingestion_meteo' retrieved from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:45:06.097+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:45:06.097+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-06-09T08:45:06.138+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:45:06.138+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingestion_meteo to None, run_after=None
+[2026-06-09T08:45:06.177+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_ingestion_meteo.py took 0.207 seconds
+[2026-06-09T08:45:36.446+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:45:36.448+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_ingestion_meteo.py for tasks to queue
+[2026-06-09T08:45:36.452+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:45:36.451+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:45:36.477+0000] {processor.py:840} INFO - DAG(s) 'dag_ingestion_meteo' retrieved from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:45:36.519+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:45:36.519+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-06-09T08:45:36.538+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:45:36.538+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingestion_meteo to None, run_after=None
+[2026-06-09T08:45:36.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_ingestion_meteo.py took 0.126 seconds
+[2026-06-09T08:46:06.920+0000] {processor.py:161} INFO - Started process (PID=232) to work on /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:46:06.922+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_ingestion_meteo.py for tasks to queue
+[2026-06-09T08:46:06.924+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:46:06.924+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:46:06.949+0000] {processor.py:840} INFO - DAG(s) 'dag_ingestion_meteo' retrieved from /opt/airflow/dags/dag_ingestion_meteo.py
+[2026-06-09T08:46:06.986+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:46:06.986+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-06-09T08:46:07.019+0000] {logging_mixin.py:188} INFO - [2026-06-09T08:46:07.018+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingestion_meteo to None, run_after=None
+[2026-06-09T08:46:07.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_ingestion_meteo.py took 0.146 seconds
