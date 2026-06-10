@@ -17,6 +17,8 @@ x-airflow-common: &airflow-common
   depends_on:
     postgres:
       condition: service_healthy
+    db_meteo:
+      condition: service_healthy
 
 services:
   postgres:
@@ -27,6 +29,21 @@ services:
       POSTGRES_DB: airflow
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+
+  db_meteo:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${DB_METEO_USER}
+      POSTGRES_PASSWORD: ${DB_METEO_PASSWORD}
+      POSTGRES_DB: ${DB_METEO_NAME}
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${DB_METEO_USER}"]
       interval: 5s
       retries: 5
 
@@ -43,6 +60,8 @@ services:
     depends_on:
       airflow-init:
         condition: service_completed_successfully
+      db_meteo:
+        condition: service_healthy
     restart: always
 
   airflow-scheduler:
@@ -51,4 +70,6 @@ services:
     depends_on:
       airflow-init:
         condition: service_completed_successfully
+      db_meteo:
+        condition: service_healthy
     restart: always

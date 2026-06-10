@@ -1,16 +1,10 @@
 """
-Champs retenus depuis l'API Open-Meteo :
+Champs retenus depuis l'API Open-Meteo
 
-  - temperature_2m        : temperature actuelle en degres Celsius
-  - relative_humidity_2m  : humidite relative en pourcentage
-  - wind_speed_10m        : vitesse du vent en km/h
-  - time                  : horodatage de la mesure (ISO 8601)
-
-Champs ignores : weathercode, apparent_temperature, precipitation, etc.
-Ces champs ont ete ecartes car non necessaires pour la table cible.
-
-Structure de la table cible :
-  city | timestamp | temperature_c | humidity_pct | wind_speed_kmh
+temperature_2m        
+relative_humidity_2m  
+wind_speed_10m     
+time
 """
 
 import json
@@ -69,7 +63,6 @@ def collect_all(**context):
         )
         rows.append(row)
 
-    print("\nApercu des donnees preparees pour chargement :")
     print(f"{'Ville':<12} {'Horodatage':<22} {'Temp (C)':>8} {'Humidite (%)':>13} {'Vent (km/h)':>12}")
     print("-" * 72)
     for row in rows:
@@ -83,7 +76,7 @@ def collect_all(**context):
 
 with DAG(
     dag_id="dag_ingestion_meteo",
-    description="Ingestion Open-Meteo pour 3 villes : fetch, transform, collect",
+    description="Ingestion Open-Meteo fetch, transform, collect",
     start_date=datetime(2026, 6, 8),
     schedule_interval=None,
     catchup=False,
