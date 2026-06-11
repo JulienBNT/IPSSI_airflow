@@ -1,0 +1,26 @@
+[2026-06-10T09:14:41.111+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-10T09:14:41.154+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_meteo_v2.fetch_paris anomaly_test_paris [queued]>
+[2026-06-10T09:14:41.163+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_meteo_v2.fetch_paris anomaly_test_paris [queued]>
+[2026-06-10T09:14:41.163+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-06-10T09:14:41.193+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_paris> on 2026-06-10 09:14:40+00:00
+[2026-06-10T09:14:41.210+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=356) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-10T09:14:41.207+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_meteo_v2', 'fetch_paris', 'anomaly_test_paris', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/dag_meteo_v2.py', '--cfg-path', '/tmp/tmpjrzj8xze']
+[2026-06-10T09:14:41.212+0000] {standard_task_runner.py:63} INFO - Started process 358 to run task
+[2026-06-10T09:14:41.213+0000] {standard_task_runner.py:91} INFO - Job 29: Subtask fetch_paris
+[2026-06-10T09:14:41.293+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_meteo_v2.fetch_paris anomaly_test_paris [running]> on host 60aeb70330b1
+[2026-06-10T09:14:41.421+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_meteo_v2' AIRFLOW_CTX_TASK_ID='fetch_paris' AIRFLOW_CTX_EXECUTION_DATE='2026-06-10T09:14:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='anomaly_test_paris'
+[2026-06-10T09:14:41.423+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-10T09:14:41.438+0000] {fetch.py:33} INFO - [Paris] Appel API Open-Meteo
+[2026-06-10T09:14:41.593+0000] {fetch.py:37} INFO - [Paris] Reponse brute recue : {
+  "time": "2026-06-10T11:00",
+  "interval": 900,
+  "temperature_2m": 15.8,
+  "relative_humidity_2m": 55,
+  "wind_speed_10m": 11.9
+}
+[2026-06-10T09:14:41.600+0000] {fetch.py:51} INFO - [Paris] Archive sauvegardee : /opt/airflow/archive/paris/anomaly_test_paris.json
+[2026-06-10T09:14:41.653+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-10T09:14:41.654+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-10T09:14:41.666+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_meteo_v2, task_id=fetch_paris, run_id=anomaly_test_paris, execution_date=20260610T091440, start_date=20260610T091441, end_date=20260610T091441
+[2026-06-10T09:14:41.709+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-10T09:14:41.723+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

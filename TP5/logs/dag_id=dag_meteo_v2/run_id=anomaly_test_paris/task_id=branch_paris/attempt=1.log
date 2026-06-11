@@ -1,0 +1,23 @@
+[2026-06-10T09:14:43.654+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-10T09:14:43.693+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_meteo_v2.branch_paris anomaly_test_paris [queued]>
+[2026-06-10T09:14:43.703+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_meteo_v2.branch_paris anomaly_test_paris [queued]>
+[2026-06-10T09:14:43.704+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-06-10T09:14:43.736+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): branch_paris> on 2026-06-10 09:14:40+00:00
+[2026-06-10T09:14:43.751+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=367) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-10T09:14:43.751+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_meteo_v2', 'branch_paris', 'anomaly_test_paris', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/dag_meteo_v2.py', '--cfg-path', '/tmp/tmpwr58e5p_']
+[2026-06-10T09:14:43.753+0000] {standard_task_runner.py:63} INFO - Started process 371 to run task
+[2026-06-10T09:14:43.753+0000] {standard_task_runner.py:91} INFO - Job 35: Subtask branch_paris
+[2026-06-10T09:14:43.829+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_meteo_v2.branch_paris anomaly_test_paris [running]> on host 60aeb70330b1
+[2026-06-10T09:14:43.966+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_meteo_v2' AIRFLOW_CTX_TASK_ID='branch_paris' AIRFLOW_CTX_EXECUTION_DATE='2026-06-10T09:14:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='anomaly_test_paris'
+[2026-06-10T09:14:43.968+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-10T09:14:43.984+0000] {baseoperator.py:399} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2026-06-10T09:14:44.000+0000] {quality.py:38} INFO - [Paris] Controle qualite OK
+[2026-06-10T09:14:44.035+0000] {dag_meteo_v2.py:51} INFO - [Paris] Qualite OK -> chargement
+[2026-06-10T09:14:44.038+0000] {python.py:237} INFO - Done. Returned value was: load_paris
+[2026-06-10T09:14:44.039+0000] {branch.py:36} INFO - Branch into load_paris
+[2026-06-10T09:14:44.039+0000] {skipmixin.py:178} INFO - Following branch load_paris
+[2026-06-10T09:14:44.060+0000] {skipmixin.py:246} INFO - Skipping tasks [('flag_anomaly_paris', -1)]
+[2026-06-10T09:14:44.102+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-10T09:14:44.132+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_meteo_v2, task_id=branch_paris, run_id=anomaly_test_paris, execution_date=20260610T091440, start_date=20260610T091443, end_date=20260610T091444
+[2026-06-10T09:14:44.209+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-10T09:14:44.221+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

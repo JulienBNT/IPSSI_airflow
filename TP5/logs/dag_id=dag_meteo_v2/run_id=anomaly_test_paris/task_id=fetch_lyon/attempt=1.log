@@ -1,0 +1,26 @@
+[2026-06-10T09:14:41.111+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-10T09:14:41.152+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_meteo_v2.fetch_lyon anomaly_test_paris [queued]>
+[2026-06-10T09:14:41.163+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_meteo_v2.fetch_lyon anomaly_test_paris [queued]>
+[2026-06-10T09:14:41.163+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-06-10T09:14:41.193+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_lyon> on 2026-06-10 09:14:40+00:00
+[2026-06-10T09:14:41.208+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_meteo_v2', 'fetch_lyon', 'anomaly_test_paris', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/dag_meteo_v2.py', '--cfg-path', '/tmp/tmphoofy804']
+[2026-06-10T09:14:41.213+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=355) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-10T09:14:41.213+0000] {standard_task_runner.py:91} INFO - Job 30: Subtask fetch_lyon
+[2026-06-10T09:14:41.214+0000] {standard_task_runner.py:63} INFO - Started process 359 to run task
+[2026-06-10T09:14:41.298+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_meteo_v2.fetch_lyon anomaly_test_paris [running]> on host 60aeb70330b1
+[2026-06-10T09:14:41.420+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_meteo_v2' AIRFLOW_CTX_TASK_ID='fetch_lyon' AIRFLOW_CTX_EXECUTION_DATE='2026-06-10T09:14:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='anomaly_test_paris'
+[2026-06-10T09:14:41.422+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-10T09:14:41.440+0000] {fetch.py:33} INFO - [Lyon] Appel API Open-Meteo
+[2026-06-10T09:14:41.589+0000] {fetch.py:37} INFO - [Lyon] Reponse brute recue : {
+  "time": "2026-06-10T11:00",
+  "interval": 900,
+  "temperature_2m": 17.4,
+  "relative_humidity_2m": 53,
+  "wind_speed_10m": 11.2
+}
+[2026-06-10T09:14:41.595+0000] {fetch.py:51} INFO - [Lyon] Archive sauvegardee : /opt/airflow/archive/lyon/anomaly_test_paris.json
+[2026-06-10T09:14:41.636+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-10T09:14:41.639+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-10T09:14:41.649+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_meteo_v2, task_id=fetch_lyon, run_id=anomaly_test_paris, execution_date=20260610T091440, start_date=20260610T091441, end_date=20260610T091441
+[2026-06-10T09:14:41.711+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-10T09:14:41.725+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

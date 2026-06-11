@@ -1,0 +1,19 @@
+[2026-06-10T09:17:41.587+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-10T09:17:41.626+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_meteo_v2.transform_lyon rerun_idempotence_test [queued]>
+[2026-06-10T09:17:41.637+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_meteo_v2.transform_lyon rerun_idempotence_test [queued]>
+[2026-06-10T09:17:41.638+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-06-10T09:17:41.657+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_lyon> on 2026-06-10 09:17:40.037451+00:00
+[2026-06-10T09:17:41.670+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_meteo_v2', 'transform_lyon', 'rerun_idempotence_test', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/dag_meteo_v2.py', '--cfg-path', '/tmp/tmpdulxhq90']
+[2026-06-10T09:17:41.671+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=178) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-10T09:17:41.672+0000] {standard_task_runner.py:91} INFO - Job 60: Subtask transform_lyon
+[2026-06-10T09:17:41.673+0000] {standard_task_runner.py:63} INFO - Started process 183 to run task
+[2026-06-10T09:17:41.741+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_meteo_v2.transform_lyon rerun_idempotence_test [running]> on host a2b711a2ff4e
+[2026-06-10T09:17:41.854+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_meteo_v2' AIRFLOW_CTX_TASK_ID='transform_lyon' AIRFLOW_CTX_EXECUTION_DATE='2026-06-10T09:17:40.037451+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='rerun_idempotence_test'
+[2026-06-10T09:17:41.855+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-10T09:17:41.890+0000] {transform.py:28} INFO - [Lyon] Donnees transformees : {'city': 'Lyon', 'timestamp': '2026-06-10T11:15', 'temperature_c': 17.5, 'humidity_pct': 52, 'wind_speed_kmh': 12.3}
+[2026-06-10T09:17:41.910+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-10T09:17:41.911+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-10T09:17:41.923+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_meteo_v2, task_id=transform_lyon, run_id=rerun_idempotence_test, execution_date=20260610T091740, start_date=20260610T091741, end_date=20260610T091741
+[2026-06-10T09:17:41.968+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-10T09:17:42.011+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-10T09:17:42.017+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

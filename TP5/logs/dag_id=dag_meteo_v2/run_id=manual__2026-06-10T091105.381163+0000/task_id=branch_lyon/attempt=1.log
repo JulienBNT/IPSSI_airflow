@@ -1,0 +1,24 @@
+[2026-06-10T09:11:09.849+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-10T09:11:09.891+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_meteo_v2.branch_lyon manual__2026-06-10T09:11:05.381163+00:00 [queued]>
+[2026-06-10T09:11:09.903+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_meteo_v2.branch_lyon manual__2026-06-10T09:11:05.381163+00:00 [queued]>
+[2026-06-10T09:11:09.904+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-06-10T09:11:09.948+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): branch_lyon> on 2026-06-10 09:11:05.381163+00:00
+[2026-06-10T09:11:09.959+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=286) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-10T09:11:09.961+0000] {standard_task_runner.py:63} INFO - Started process 291 to run task
+[2026-06-10T09:11:09.959+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_meteo_v2', 'branch_lyon', 'manual__2026-06-10T09:11:05.381163+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/dag_meteo_v2.py', '--cfg-path', '/tmp/tmpt77_wrt1']
+[2026-06-10T09:11:09.962+0000] {standard_task_runner.py:91} INFO - Job 21: Subtask branch_lyon
+[2026-06-10T09:11:10.046+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_meteo_v2.branch_lyon manual__2026-06-10T09:11:05.381163+00:00 [running]> on host 60aeb70330b1
+[2026-06-10T09:11:10.179+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_meteo_v2' AIRFLOW_CTX_TASK_ID='branch_lyon' AIRFLOW_CTX_EXECUTION_DATE='2026-06-10T09:11:05.381163+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-10T09:11:05.381163+00:00'
+[2026-06-10T09:11:10.181+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-10T09:11:10.199+0000] {baseoperator.py:399} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2026-06-10T09:11:10.216+0000] {quality.py:38} INFO - [Lyon] Controle qualite OK
+[2026-06-10T09:11:10.269+0000] {dag_meteo_v2.py:51} INFO - [Lyon] Qualite OK -> chargement
+[2026-06-10T09:11:10.270+0000] {python.py:237} INFO - Done. Returned value was: load_lyon
+[2026-06-10T09:11:10.271+0000] {branch.py:36} INFO - Branch into load_lyon
+[2026-06-10T09:11:10.272+0000] {skipmixin.py:178} INFO - Following branch load_lyon
+[2026-06-10T09:11:10.298+0000] {skipmixin.py:246} INFO - Skipping tasks [('flag_anomaly_lyon', -1)]
+[2026-06-10T09:11:10.348+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-10T09:11:10.386+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_meteo_v2, task_id=branch_lyon, run_id=manual__2026-06-10T09:11:05.381163+00:00, execution_date=20260610T091105, start_date=20260610T091109, end_date=20260610T091110
+[2026-06-10T09:11:10.457+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-10T09:11:10.518+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-10T09:11:10.524+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
